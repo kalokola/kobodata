@@ -1,0 +1,7 @@
+README.md
+setup.py
+kobodata.egg-info/PKG-INFO
+kobodata.egg-info/SOURCES.txt
+kobodata.egg-info/dependency_links.txt
+kobodata.egg-info/requires.txt
+kobodata.egg-info/top_level.txt
