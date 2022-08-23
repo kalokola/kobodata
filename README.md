@@ -46,9 +46,9 @@ pip3 install --upgrade kobodata
 
 # Get Account Credentials
 1. You have to sign up at [Kobo ToolBox](https://www.kobotoolbox.org/) and create your first form. 
-2. To obratin [account_token] got to your account settings and you will see an API Token section, view the token and copy it to your cip board. The API Token looks like [bd1f68af664306q82d62w1412873d3b76b4321]
-3. To obtain the [dataset_uuid] navigate to your kobo project, select [DATA] to view the table. Inspect the link to your table and copy a section that looks like [agLCVHnDkbXRkEuhtp4oUF]
-4. Specify the [account_domain] for your account [kf.kobotoolbox.org] or [kobo.humanitarianresponse.info]
+2. To obratin [account_token]() got to your account settings and you will see an API Token section, view the token and copy it to your cip board. The API Token looks like [bd1f68af664306q82d62w1412873d3b76b4321]()
+3. To obtain the [dataset_uuid]() navigate to your kobo project, select [DATA] to view the table. Inspect the link to your table and copy a section that looks like [agLCVHnDkbXRkEuhtp4oUF]
+4. Specify the [**account_domain**] for your account [kf.kobotoolbox.org] or [kobo.humanitarianresponse.info]
 
 Once you have got the credentials you can proceed as follows. 
 
