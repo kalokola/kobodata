@@ -9,13 +9,14 @@
 
 A python wrapper for [Kobo Data Tool Kit](https://www.kobotoolbox.org/)
 
-## Features supported
+## Why Kobodata
 
 - This helps get remote data collected easily via kobo forms via consuming the APIS from [*.kobotoolbox.org](https://www.kobotoolbox.org/) sites.
 
 There are several accounts , you can signup for one:
-    - [Humanitarian Organisation Accounts](https://kobo.humanitarianresponse.info/)
-    - [Researchers, Aid Workers & Everyone Else Accounts](https://kf.kobotoolbox.org/)
+
+- [Humanitarian Organisation Accounts](https://kobo.humanitarianresponse.info/)
+- [Researchers, Aid Workers & Everyone Else Accounts](https://kf.kobotoolbox.org/)
 
 ## Getting started
 

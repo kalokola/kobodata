@@ -14,7 +14,7 @@ class KoboData:
         r = requests.get(url, headers=headers)
         if r.status_code == 200:
             return json.loads(r.content)
-        return None
+        return {"error":"Incorrect Authy Details"}
 
     
     
