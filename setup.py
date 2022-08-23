@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
 	description="Python Tool for accessing online data from KOBO TOOLBOX.",
 	name="kobodata",
-	version="0.0.7",
+	version="0.0.9",
 	author = "Brightius Kalokola",
 	author_email = "brightiuskalokola@gmail.com",
 	long_description = long_description,
