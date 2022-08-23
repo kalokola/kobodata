@@ -1,82 +1,81 @@
 <samp>
-# KOBODATA DOCUMENTATION
 
-## Contents
+# [kobodata](https://pypi.org/project/kobodata/)
 
-**Step(1) Installation**
-```$ pip3 install kobodata```
+[![Made in Tanzania](https://img.shields.io/badge/made%20in-tanzania-008751.svg?style=flat-square)](https://github.com/Tanzania-Developers-Community/made-in-tanzania)
+[![Downloads](https://pepy.tech/badge/kobodata)](https://pepy.tech/project/kobodata)
+[![Downloads](https://pepy.tech/badge/kobodata/month)](https://pepy.tech/project/kobodata)
+[![Downloads](https://pepy.tech/badge/kobodata/week)](https://pepy.tech/project/kobodata)
 
-## How to Use
+A python wrapper for [Kobo Data Tool Kit](https://www.kobotoolbox.org/)
 
-**Step(1) : import KoboData class**
+## Features supported
 
-```python
-from kobodata import KoboData
+- This helps get remote data collected easily via kobo forms via consuming the APIS from [*.kobotoolbox.org](https://www.kobotoolbox.org/) sites.
+
+There are several accounts , you can signup for one:
+    - [Humanitarian Organisation Accounts](https://kobo.humanitarianresponse.info/)
+    - [Researchers, Aid Workers & Everyone Else Accounts](https://kf.kobotoolbox.org/)
+
+## Getting started
+
+To get started with **kobodata**, you have to firstly install the library either directly or using *pip*.
+
+### Installation directly
+
+Use git to clone or you can also manually download the project repository just as shown below;
+
+```bash
+$ git clone https://github.com/kalokola/kobodata
+$ cd kobodata
+kobodata $ python setup.py install 
 ```
 
-**Step(2) : Specify Authentication credentials**
+### Installing from pip
 
-- (i) your authentocation token obtained from kobo account settings eg "768fe18a0c1xxxxxxa0c1977a4xxx6ed88
+```bash
+# For Windows 
 
-```python
-account_token = "xxxxxxxxxxxxxxxxxxxxxxxxx"
+pip install  --upgrade kobodata
+
+#For Linux | MAC 
+
+pip3 install --upgrade kobodata
 ```
 
-- (ii) unique identifier for your dataset e.g "agLCVHnDkbXRkEuhtp4oUF"
+# Get Account Credentials
+1. You have to sign up at [Kobo ToolBox](https://www.kobotoolbox.org/) and create your first form. 
+2. To obratin [account_token] got to your account settings and you will see an API Token section, view the token and copy it to your cip board. The API Token looks like [bd1f68af664306q82d62w1412873d3b76b4321]
+3. To obtain the [dataset_uuid] navigate to your kobo project, select [DATA] to view the table. Inspect the link to your table and copy a section that looks like [agLCVHnDkbXRkEuhtp4oUF]
+4. Specify the [account_domain] for your account [kf.kobotoolbox.org] or [kobo.humanitarianresponse.info]
+
+Once you have got the credentials you can proceed as follows. 
+
+## How to Use (Code Exmaple).
+
+Here how to fetch real time data
 
 ```python
-dataset_uuid = "xxxxxxxxxxxxxxx"
+>>> from kobodata import KoboData 
+>>> account_token = "bd1f68af664306q82d62w1412873d3b76b4321"
+>>> dataset_uuid = ""
+>>> account_domain = "kf.kobotoolbox.org"
+>>> dataset = KoboData(
+            account_subdomain,
+            dataset_uuid,
+            account_token     
+        )
+
+# get number observations
+>>> dataset.counts
+    784 rows
+
+# return a dictionary of results
+>>> dataset.get_data
 ```
 
-- (iii) depends on your kobo account type eg: "kf.kobotoolbox.org" or "kobo.humanitarianresponse.info"
+## All the credit
 
-```python
-account_domain = "xxxxxxxxxxxxxxx"
-```
-
-**Step(3) : Access data**
-
-- (i) import the class and specify your credentials
-
-```python
-dataset = KoboData(
-    account_domain,
-    dataset_uuid,
-    account_token     
-)
-```
-
-
-- (ii) to get data, it returns a dictionary of your data
-
-```python
-my_data = dataset.kobo_data
-```
-
-- (iii) you can convert into a pandas data frame for further analyses
-
-```python
-import pandas as pd
-table = pd.DataFrame(my_data)
-print(table)
-```
-
-
-- (iv) total number of data collected
-
-```python
-print(dataset.counts)
-```
-
-
-## Contacts
-> Programmed by Brightius Kalokola
-
-[Email](brightiuskalokola@gmail.com)
-
-[Twitter](https://twitter.com/kalokolabr)
-
-[Github](https://github.com/kalokola)
-
-`I code to Spread Ideas and make things easier for people.`
+1. [kalokola](https://github.com/kalokola)
+2. All other contributors
 </samp>
